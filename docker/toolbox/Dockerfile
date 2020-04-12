@@ -8,4 +8,4 @@ COPY . /usr/scr/app/
 
 CMD ["python","Main.py"]
 
-CMD tail -f /dev/null
+
