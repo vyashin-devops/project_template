@@ -1,8 +1,8 @@
-FROM python:3.8
-
-RUN mkdir -p /usr/scr/app/
-WORKDIR /usr/scr/app/
-
-COPY . /usr/scr/app/
-
-CMD ["python","Main.py"]
+# Version: 0.0.1
+FROM ubuntu:14.04
+MAINTAINER Vyacheslav Yashin <vyashin-devops@gmail.com>
+RUN apt-get update
+RUN apt-get install -y nginx
+RUN echo 'Hi, I am in your container' \
+        >/usr/share/nginx/html/index.html
+EXPOSE 80
